@@ -6,7 +6,7 @@ Refatorar: editar o seu código.
 """
 
 
-def soma(x , y, z):
+def soma(x , y, z=0):
     #Definição
     print(f'{x=}  y={y} {z=}','|','x + y + s =', x + y + z )
 
