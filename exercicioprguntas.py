@@ -25,10 +25,11 @@ for indice, opcao in enumerate(perguntas[0]['Opções']):
     print(indice + 1,")",opcao)
 pergunta_1 = str(input('Escolha uma opção: '))
 if pergunta_1 == '4':
-    print('Resposta correta!')
-    valor += 1
-else:
-    print('Respota incorreta!')
+    try:
+        print('Resposta correta!')
+        valor += 1
+    except(KeyError):
+        print('Respota incorreta!')
 
 print()
 print("Pergunta: ", perguntas[1]['Pergunta'])
@@ -37,11 +38,12 @@ for indice, opcao in enumerate(perguntas[1]['Opções']):
     print(indice + 1,")",opcao)
 pergunta_1 = str(input('Escolha uma opção: '))
 if pergunta_1 == '25':
-    print('Resposta correta!')
-    valor += 1
-else:
-    print('Respota incorreta!')
-
+    try:
+        print('Resposta correta!')
+        valor += 1
+    except(KeyError):
+        print('Respota incorreta!')
+ 
 print()
 print("Pergunta: ", perguntas[2]['Pergunta'])
 print('Opções: ')
@@ -49,10 +51,11 @@ for indice, opcao in enumerate(perguntas[2]['Opções']):
     print(indice + 1,")",opcao)
 pergunta_1 = str(input('Escolha uma opção: '))
 if pergunta_1 == '5':
-    print('Resposta correta!')
-    valor += 1
-else:
-    print('Respota incorreta!')    
+    try:
+        print('Resposta correta!')
+        valor += 1
+    except(KeyError):
+         print('Respota incorreta!')
 
 print()
 print(f'Você acertou {valor}')
