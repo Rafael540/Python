@@ -19,43 +19,78 @@ perguntas = [
 
 valor = 0
 
-print("Pergunta: ", perguntas[0]['Pergunta'])
-print('Opções: ')
-for indice, opcao in enumerate(perguntas[0]['Opções']):
-    print(indice + 1,")",opcao)
-pergunta_1 = str(input('Escolha uma opção: '))
-if pergunta_1 == '4':
-    try:
-        print('Resposta correta!')
-        valor += 1
-    except(KeyError):
-        print('Respota incorreta!')
 
-print()
-print("Pergunta: ", perguntas[1]['Pergunta'])
-print('Opções: ')
-for indice, opcao in enumerate(perguntas[1]['Opções']):
-    print(indice + 1,")",opcao)
-pergunta_1 = str(input('Escolha uma opção: '))
-if pergunta_1 == '25':
-    try:
+try:
+    print("Pergunta: ", perguntas[0]['Pergunta'])
+    for indice, opcao in enumerate(perguntas[0]['Opções']):
+     print(indice,")",opcao)
+     
+    pergunta_1 = str(input('Escolha uma opção: '))
+    if pergunta_1 == '4':
         print('Resposta correta!')
         valor += 1
-    except(KeyError):
+    else:
         print('Respota incorreta!')
- 
-print()
-print("Pergunta: ", perguntas[2]['Pergunta'])
-print('Opções: ')
-for indice, opcao in enumerate(perguntas[2]['Opções']):
-    print(indice + 1,")",opcao)
-pergunta_1 = str(input('Escolha uma opção: '))
-if pergunta_1 == '5':
-    try:
+except(ValueError):
+    print("Tentativa de acessar chave inexistente!")
+    print("Pergunta: ", perguntas[0]['Pergunta'])
+    for indice, opcao in enumerate(perguntas[0]['Opções']):
+            print(indice + 1,")",opcao)
+    pergunta_1 = str(input('Escolha uma opção: ')) 
+    if pergunta_1 == '4':
         print('Resposta correta!')
         valor += 1
-    except(KeyError):
-         print('Respota incorreta!')
+    else:
+        print('Respota incorreta!')   
+
+try:
+    for indice, opcao in enumerate(perguntas[1]['Opções']):
+     print(indice + 1,")",opcao)
+    pergunta_1 = str(input('Escolha uma opção: '))
+    if pergunta_1 == '25':
+        print('Resposta correta!')
+        valor += 1
+    else:
+        print('Respota incorreta!')
+except(ValueError):
+    print("Tentativa de acessar chave inexistente!")
+    print("Pergunta: ", perguntas[1]['Pergunta'])
+    for indice, opcao in enumerate(perguntas[1]['Opções']):
+            print(indice + 1,")",opcao)
+    pergunta_1 = str(input('Escolha uma opção: '))
+    if pergunta_1 == '25':
+        print('Resposta correta!')
+        valor += 1
+    else:
+        print('Respota incorreta!')       
+
+
+try:
+    print("Pergunta: ", perguntas[2]['Pergunta'])
+    for indice, opcao in enumerate(perguntas[2]['Opções']):
+     print(indice + 1,")",opcao)
+    pergunta_1 = str(input('Escolha uma opção: '))
+    if pergunta_1 == '5':
+        print('Resposta correta!')
+        valor += 1
+    else:
+        print('Respota incorreta!')
+except(ValueError):
+    print("Tentativa de acessar chave inexistente!")
+    print("Pergunta: ", perguntas[2]['Pergunta'])
+
+    for indice, opcao in enumerate(perguntas[2]['Opções']):
+            print(indice + 1,")",opcao)
+    pergunta_1 = str(input('Escolha uma opção: '))
+    if pergunta_1 == '5':
+        print('Resposta correta!')
+        valor += 1
+    else:
+        print('Respota incorreta!')       
+
+
+
+
 
 print()
 print(f'Você acertou {valor}')
