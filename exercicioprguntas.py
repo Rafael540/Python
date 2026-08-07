@@ -69,6 +69,7 @@ try:
     print("Pergunta: ", perguntas[2]['Pergunta'])
     for indice, opcao in enumerate(perguntas[2]['Opções']):
      print(indice + 1,")",opcao)
+
     pergunta_1 = str(input('Escolha uma opção: '))
     if pergunta_1 == '5':
         print('Resposta correta!')
@@ -81,6 +82,7 @@ except(ValueError):
 
     for indice, opcao in enumerate(perguntas[2]['Opções']):
             print(indice + 1,")",opcao)
+            
     pergunta_1 = str(input('Escolha uma opção: '))
     if pergunta_1 == '5':
         print('Resposta correta!')
